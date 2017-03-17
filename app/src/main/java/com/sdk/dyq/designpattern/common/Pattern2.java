@@ -1,11 +1,11 @@
 package com.sdk.dyq.designpattern.common;
 
 /**
- * Created by yuanqiang on 2017/3/14.
+ * 建造者模式
+ * AlertDialog等使用建造者模式
  */
 
 public class Pattern2 {
-    //建造者模式
     //关注过程
     // 1.具体产品、产品所具备的部分、
     // 2.抽象产品生成器（产品部分的生成、组合）、
@@ -27,7 +27,7 @@ public class Pattern2 {
         void composite();
     }
 
-    public class Builder implements iBuilder{
+    class Builder implements iBuilder{
         Person person = new Person();
         @Override
         public void createUnit1() {
@@ -43,7 +43,7 @@ public class Pattern2 {
         }
     }
     //统筹者
-    public class Director {
+    class Director {
         iBuilder builder;
 
         public Director(Builder builder) {
@@ -56,5 +56,7 @@ public class Pattern2 {
             builder.composite();
         }
     }
+
+
 
 }

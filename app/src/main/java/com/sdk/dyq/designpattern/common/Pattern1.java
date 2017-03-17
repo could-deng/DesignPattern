@@ -2,6 +2,7 @@ package com.sdk.dyq.designpattern.common;
 
 /**
  * Created by yuanqiang on 2017/3/14.
+ * 工厂模式
  */
 
 public class Pattern1 {
