@@ -2,6 +2,8 @@ package com.sdk.dyq.designpattern.common;
 
 /**
  * 桥接模式
+ * 由于实际的需要，某个类具有两个以上的维度变化，如果只是使用继承将无法实现这种需要
+ * 就是把事物与具体实现分开，使他们可以各自独立地变化。
  * 将抽象部分与实现部分分离，使它们都可以独立的变化。
  */
 
@@ -10,6 +12,14 @@ public class Pattern3 {
     //2.refined abstraction拓展抽象化角色,修正或者改变父类对抽象化的定义
     //3.implementor,实现化对象
     //4.onCreateImplementor，具体实现者
+    /**
+     * implementor，实现化对象
+     */
+    interface Drawing {
+        void drawCircle();
+        void drawRectangle();
+    }
+
     /**
      *抽象化角色
      */
@@ -55,13 +65,7 @@ public class Pattern3 {
             drawRectangle();
         }
     }
-    /**
-     * implementor，实现化对象
-     */
-    interface Drawing {
-        void drawCircle();
-        void drawRectangle();
-    }
+
 
     /**
      *具体实现者

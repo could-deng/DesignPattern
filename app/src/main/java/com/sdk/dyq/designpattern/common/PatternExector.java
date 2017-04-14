@@ -49,15 +49,15 @@ public class PatternExector {
         System.out.println(p1);
     }
 
-    /**
-     * 建造者
-     */
-    void pattern2Exector(){
-        Pattern2 p2 = new Pattern2();
-        Pattern2.Builder builder = p2.new Builder();
-        Pattern2.Director director = p2.new Director(builder);
-        director.build();
-    }
+//    /**
+//     * 建造者
+//     */
+//    void pattern2Exector(){
+//        Pattern2 p2 = new Pattern2();
+//        Pattern2.Builder builder = p2.new Builder();
+//        Pattern2.Director director = p2.new Director(builder);
+//        director.build();
+//    }
 
     /**
      * 建造者

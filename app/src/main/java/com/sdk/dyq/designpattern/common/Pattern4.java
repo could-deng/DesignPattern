@@ -36,6 +36,10 @@ public class Pattern4 implements Cloneable{
         return hobbies;
     }
 
+    /**
+     * 深拷贝
+     * @return
+     */
     @Override
     protected Object clone()  {
         Pattern4 person = null;
@@ -50,4 +54,14 @@ public class Pattern4 implements Cloneable{
     }
 
 
+    /**
+     * 浅拷贝,即直接实现clonable接口即可
+     * @return
+     * @throws CloneNotSupportedException
+     */
+//    @Override
+//    protected Object clone() throws CloneNotSupportedException {
+//        Pattern4 person = (Pattern4) super.clone();
+//        return person;
+//    }
 }

@@ -1,7 +1,6 @@
 package com.sdk.dyq.designpattern.common;
 
 /**
- * Created by yuanqiang on 2017/3/14.
  * 工厂模式
  */
 
@@ -60,11 +59,11 @@ public class Pattern1 {
     public class BBus implements bus{    }
     public class Aplane implements plane{    }
     public class Bplane implements plane{    }
-    public abstract class Factory{
+    public abstract class theFactory{
         abstract bus produceBus();
         abstract plane producePlane();
     }
-    public class AFactory extends Factory{
+    public class AFactory extends theFactory{
         @Override
         bus produceBus() {
             return new Abus();
@@ -74,7 +73,7 @@ public class Pattern1 {
             return new Aplane();
         }
     }
-    public class BFactory extends Factory{
+    public class BFactory extends theFactory{
         @Override
         bus produceBus() {
             return new BBus();

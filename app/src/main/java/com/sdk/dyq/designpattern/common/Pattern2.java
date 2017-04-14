@@ -15,7 +15,7 @@ public class Pattern2 {
     }
     public class Unit2{
     }
-    public class Person{
+    class Person{
         public Person() {
         }
         Unit1 unit1;//部分
